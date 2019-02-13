@@ -1,5 +1,3 @@
-
-
 import matplotlib.pyplot as plt
 
 from keras.layers import Dropout
@@ -14,16 +12,12 @@ from keras import backend as K
 from keras.models import Sequential
 from keras.layers import Dense
 #  --------------------  Loading Data Import -----------------------
-
 import pickle
 from sklearn.model_selection import train_test_split
 import scipy.misc as smi
 import numpy as np
 import os
-
-
 #  ------------------------  Loading Data --------------------------
-
 label = os.listdir("../dataset/training")
 label=label[0:]
 dataset=[]
@@ -49,16 +43,11 @@ X=np.array(X)
 Y=np.array(Y)
 
 X_train,y_train,  = X,Y
-
-
 data_set=(X_train,y_train)
-
 save_label = open("int_to_word_out.pickle","wb")
 pickle.dump(label, save_label)
 save_label.close()
-
 # ------------------------------------------------------------------
-
 import keras
 K.set_image_dim_ordering('tf')
 # fix random seed for reproducibility
@@ -66,7 +55,6 @@ seed = 7
 np.random.seed(seed)
 # load data
 (X_train,y_train)=data_set
-
 
 # normalize inputs from 0-255 to 0.0-1.0
 X_train = X_train.astype('float32')
@@ -111,19 +99,3 @@ with open("model.json", "w") as json_file:
 # serialize weights to HDF5
 model.save_weights("model.h5")
 print("Saved model to disk")
-
-
-
-
-# later...
-
-# load json and create model
-#json_file = open('model_face.json', 'r')
-#loaded_model_json = json_file.read()
-#json_file.close()
-#loaded_model = model_from_json(loaded_model_json)
-# load weights into new model
-#loaded_model.load_weights("model_face.h5")
-#print("Loaded model from disk")
-
-
