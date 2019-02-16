@@ -4,6 +4,7 @@
 2 / 2561
 
 Presented by Group 05 Section 02
+
 B5901333	Mr. Thammaphon Sithanut
 B5917495	Mr. Sivaroot Chuncharoen
 B5917525	Mr. Monton Kanpoh
@@ -13,7 +14,6 @@ B5922635	Mr. Aphirach Ek-Un
 Present to
 Dr. Sarunya Kanjanawattana
 Dr. Nuntawut Kaoungku
-
 
 Computer Engineering
 Suranaree University of Technology
